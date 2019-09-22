@@ -1,0 +1,12 @@
+each data in mP
+    .card.card_largest_with_image.grid-item
+        img.card-img-top(src=''+data.postImageSrc+'')
+        .card-body
+            .card-title
+                a(href=''+data.postLink+'')
+                    | #{data.postTitle}
+            p.card-text
+                | #{data.postDescription}
+            small.post_meta
+                a(href='#') #{data.postSource}
+                    span Sep 29, 2017 at 9:48 am

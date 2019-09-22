@@ -1,0 +1,10 @@
+{
+    "rssfeeds":{
+        "Techcrunch":"https://techcrunch.com/feed/",
+        "Kotaku":"https://kotaku.com/rss",
+        "Reddit":"https://reddit.com/.rss",
+        "HuffPost":"https://www.huffpost.com/section/world-news/feed",
+        "Guardian":"https://www.theguardian.com/science/rss",
+        "Polygon":"https://www.polygon.com/rss/index.xml"
+    }
+}

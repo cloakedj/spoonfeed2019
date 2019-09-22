@@ -1,0 +1,32 @@
+{
+  "name": "SpoonFeed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@hapi/joi": "^15.1.1",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "got": "^9.6.0",
+    "metascraper": "^5.7.4",
+    "metascraper-image": "^5.7.4",
+    "mongoose": "^5.6.9",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.4",
+    "rss-parser": "^3.7.2",
+    "string-strip-html": "^4.2.3",
+    "striptags": "^3.1.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

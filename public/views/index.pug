@@ -1,0 +1,40 @@
+doctype html
+head
+  title Avision
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='description' content='Demo project')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' type='text/css' href='styles/bootstrap4/bootstrap.min.css')
+  link(href='plugins/font-awesome-4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css')
+  link(rel='stylesheet' type='text/css' href='plugins/OwlCarousel2-2.2.1/owl.carousel.css')
+  link(rel='stylesheet' type='text/css' href='plugins/OwlCarousel2-2.2.1/owl.theme.default.css')
+  link(rel='stylesheet' type='text/css' href='plugins/OwlCarousel2-2.2.1/animate.css')
+  link(rel='stylesheet' type='text/css' href='plugins/jquery.mb.YTPlayer-3.1.12/jquery.mb.YTPlayer.css')
+  link(rel='stylesheet' type='text/css' href='styles/main_styles.css')
+  link(rel='stylesheet' type='text/css' href='styles/responsive.css')
+.super_container
+    - var hP = headerPosts  
+    include includes/Header.pug
+    .page_content
+        .container
+            .row.row-lg-eq-height
+                  .col-lg-9
+                       .main_content
+                              include includes/DontMiss.pug
+                              include includes/Trending.pug
+                              include includes/Videos.pug
+                              include includes/Latest.pug
+                              .load_more
+                                  #load_more.load_more_button.text-center.trans_200 Load More
+                  include includes/Sidebar.pug
+    include includes/Footer.pug
+script(src='js/jquery-3.2.1.min.js')
+script(src='styles/bootstrap4/popper.js')
+script(src='styles/bootstrap4/bootstrap.min.js')
+script(src='plugins/OwlCarousel2-2.2.1/owl.carousel.js')
+script(src='plugins/jquery.mb.YTPlayer-3.1.12/jquery.mb.YTPlayer.js')
+script(src='plugins/easing/easing.js')
+script(src='plugins/masonry/masonry.js')
+script(src='plugins/masonry/images_loaded.js')
+script(src='js/custom.js')
