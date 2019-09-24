@@ -11,7 +11,8 @@ let getData = (async () =>{
    const scwiID = await scwiI();
    const scwBD = await scwB();
    const dcnID = await dcnI();
-   return {mPD,scwID,scwiID,scwBD,dcnID};
+   const {trendTags,trendsMoreTags} = await require('./DontMissModels/trends');
+   return {mPD,scwID,scwiID,scwBD,dcnID,trendTags,trendsMoreTags};
 })();
 
 module.exports = getData;

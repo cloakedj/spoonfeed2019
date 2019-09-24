@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const db = require('./config/db');
-const parser = require('./parser/parse');
-const rssSources = require("./config/rss");
+// const parser = require('./parser/parse');
+// const rssSources = require("./config/rss");
 const morgan = require('morgan');
 const port = process.env.PORT || 3000;
 const CRAWLINTERVAL = 1800000;
@@ -18,11 +18,11 @@ app.use(express.static(__dirname+"/public/views/"));
 
 
 app.get('/',async(req,res,next) =>{
-const {mPD,scwID,scwiID,scwBD,dcnID} = await require('./models/dontMiss');
+const {mPD,scwID,scwiID,scwBD,dcnID,trendTags,moreTrendTags} = await require('./models/dontMiss');
 const rQ = await require('./models/headerData');
 try
 {
-    console.log(`Fetch Gracefully`);
+    console.log(`Fetch Gracefully: ${moreTrendTags}`);
 }
 catch(err)
 {
@@ -34,18 +34,20 @@ res.render("index",{
     scwI:scwID,
     scwiI:scwiID,
     scwB:scwBD,
-    dcnI:dcnID
+    dcnI:dcnID,
+    tags:trendTags,
+    moreTrends:moreTrendTags
 });
 });
 //Call Parser Once when server is started
-parser
-.then(elem => console.log(elem))
-.catch(err => console.log(err));
+// parser
+// .then(elem => console.log(elem))
+// .catch(err => console.log(err));
 
-setInterval(()=>
-parser
-.then(elem => console.log(elem))
-.catch(err => console.log(err)),CRAWLINTERVAL);
+// setInterval(()=>
+// parser
+// .then(elem => console.log(elem))
+// .catch(err => console.log(err)),CRAWLINTERVAL);
 
 app.listen(port);
 

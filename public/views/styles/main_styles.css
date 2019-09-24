@@ -266,6 +266,13 @@ section
 {
 	height: 80px;
 }
+.header-mask
+{
+	height:100%;
+	width:100%;
+	background:black;
+	opacity:0.6;
+}
 
 /*********************************
 3.1 Logo

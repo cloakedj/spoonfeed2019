@@ -61,8 +61,9 @@ header.header
   .home_slider_container
     .owl-carousel.owl-theme.home_slider
         each post in hP
-          .owl-item 
+          .owl-item
             .home_slider_background(style="background-image:url('"+post.postImageSrc+"')")
+            .header-mask
             .home_slider_content_container
               .container
                 .row
