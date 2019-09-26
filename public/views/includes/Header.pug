@@ -20,6 +20,9 @@ header.header
                 a(href='#') Video
               li
                 a(href='contact.html') Contact
+              li
+                a(href='/User') 
+                  i.fas.fa-user
           .search_container.ml-auto
             .weather
               .temperature +10&deg;
@@ -70,10 +73,11 @@ header.header
                   .col
                     .home_slider_content
                       .home_slider_item_category.trans_200
-                        a.trans_200(href='category.html')= post.postSource 
+                        a.trans_200(href='category.html')= (post.postSource.split(' '))[0] 
                       .home_slider_item_title
                         a(href='post.html')
                           | #{post.postTitle}
+                      include OptionsBar.pug
                       .home_slider_item_link
                         a.trans_200(href=''+post.postLink+'')
                           | Continue Reading

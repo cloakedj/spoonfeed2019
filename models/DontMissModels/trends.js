@@ -1,7 +1,7 @@
 const mongoose =require('mongoose');
 const pModel = require('../post');
 
-let collectTags = async () =>{
+let collectTags = (async () =>{
 const tags = await pModel.find()
 .sort({crawlDate:-1,postSpoons:-1})
 .select({_id:1,postTags:{$slice:1}}) 
@@ -12,6 +12,6 @@ const moreTags = await pModel.find()
 .skip(5)
 .limit(7); 
 return {tags,moreTags};
-}
+})();
 
 module.exports = collectTags;

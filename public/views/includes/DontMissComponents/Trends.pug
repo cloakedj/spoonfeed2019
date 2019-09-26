@@ -1,13 +1,15 @@
 .section_tags.ml-auto
       ul
-        each tag in tags
-          li
-            a(href='category.html') #{(tag.postTags[0].split(' '))[0]}
+        //  each tag in tags
+        li
+          a(href='category.html') 
+          // #{(tag.postTags[0].split(' '))[0]}
 .section_panel_more
     ul
         li
             | more
             ul
-                each tag in moreTrends
-                    li
-                        a(href='category.html') #{(tag.postTags[0].split(' '))[0]}
+                // each tag in moreTrends
+                li
+                  a(href='category.html') 
+                  // #{(tag.postTags[0].split(' '))[0]}

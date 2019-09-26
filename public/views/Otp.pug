@@ -1,0 +1,13 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Enter The Otp
+  link(rel='stylesheet' type='text/css' href='styles/main_styles.css')
+  link(rel='stylesheet' type='text/css' href='styles/responsive.css')
+form(method='POST' action='/otp/insertRecord')
+  input(type='text' name="userotp" placeholder='OTP')
+  input(type='hidden' name="otp" value= onetimepass)
+  input(type='hidden' name="name" value= name)
+  input(type='hidden' name='email' value= email)
+  input(type='hidden' name='pass' value= pass)
+  input(type='submit')

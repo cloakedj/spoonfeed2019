@@ -1,0 +1,81 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Login / register material design form
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css')
+  link(rel='stylesheet' href='styles/loginsignup.css')
+  link(rel='stylesheet' type='text/css' href='styles/bootstrap4/bootstrap.min.css')
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+
+.container.white.z-depth-2
+  ul.tabs.teal
+    li.tab.col.s3
+      a.white-text.active(href='#login') login
+    li.tab.col.s3
+      a.white-text(href='#register') register
+  - if (success_msg.length > 0)
+      .alert.alert-success.alert-dismissible.fade.show(role='alert')
+          strong #{success_msg}
+          button.close(type='button' data-dismiss='alert' aria-label='Close')
+            span(aria-hidden='true') &times;
+  - if (error.length > 0)
+      .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+          strong #{error}
+          button.close(type='button' data-dismiss='alert' aria-label='Close')
+            span(aria-hidden='true') &times;
+  #login.col.s12
+    form.col.s12(action='/User/login' method='POST')
+      .form-container
+        h3.teal-text Hello
+        .row
+          .input-field.col.s12
+            i.material-icons.prefix mail
+            input#email.validate(type='email' name='email')
+            label(for='email') Email
+        .row
+          .input-field.col.s12
+            i.material-icons.prefix vpn_key
+            input#password.validate(type='password' name='password')
+            label(for='password') Password
+        br
+        .switch
+          label
+            input(type='checkbox')
+            span.lever
+            |  Remmember Me
+        br
+        center
+          input.btn.waves-effect.waves-light.teal(type='submit' value='Connect')
+          br
+          br
+          a(href='') Forgotten password?
+  #register.col.s12
+    form.col.s12(action='/User/register' method='POST')
+      .form-container
+        h3.teal-text Welcome
+        .row
+          .input-field.col.s6
+            input#last_name.validate(type='text' name='firstName')
+            label(for='last_name') First Name
+          .input-field.col.s6
+            input#last_name.validate(type='text' name='lastName')
+            label(for='last_name') Last Name
+        .row
+          .input-field.col.s12
+            input#email.validate(type='email' name='email')
+            label(for='email') Email
+        .row
+          .input-field.col.s12
+            input#password.validate(type='password' name='password')
+            label(for='password') Password
+        .row
+          .input-field.col.s12
+            input#password-confirm.validate(type='password' name='passwordConfirm')
+            label(for='password-confirm') Password Confirmation
+        center
+          input.btn.waves-effect.waves-light.teal(type='submit' value='Submit')
+// partial
+script(src='js/jquery-3.2.1.min.js')
+script(src='styles/bootstrap4/popper.js')
+script(src='styles/bootstrap4/bootstrap.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js')

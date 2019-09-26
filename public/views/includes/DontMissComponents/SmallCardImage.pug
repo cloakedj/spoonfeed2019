@@ -1,10 +1,11 @@
-each data in scwI
+each post in scwI
     .card.card_small_with_image.grid-item
-        img.card-img-top(src=''+data.postImageSrc+'')
+        img.card-img-top(src=''+post.postImageSrc+'')
         .card-body
             .card-title.card-title-small
-                a(href=''+data.postLink+'')
-                    | #{data.postTitle}
+                a(href=''+post.postLink+'')
+                    | #{post.postTitle}
+            include ../OptionsBar.pug
             small.post_meta
-                a(href='#') #{data.postSource}
+                a(href='#') #{post.postSource.slice(0,12)}
                 span Sep 29, 2017 at 9:48 am

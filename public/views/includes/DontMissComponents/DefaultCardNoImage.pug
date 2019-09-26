@@ -1,5 +1,6 @@
-each data in dcnI
+each post in dcnI
     .card.card_default.card_default_no_image.grid-item
         .card-body
             .card-title.card-title-small
-                a(href=''+data.postLink+'') #{data.postTitle}
+                a(href=''+post.postLink+'') #{post.postTitle}
+            include ../OptionsBar.pug

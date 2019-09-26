@@ -1,0 +1,10 @@
+.postActions
+    .spoon
+        i.material-icons(data-id= post._id)  sentiment_very_satisfied
+    .fork
+        i.material-icons(data-id= post._id) sentiment_very_dissatisfied 
+    .bookmark
+        i.far.fa-bookmark(data-id= post._id)
+.CountOfActions
+    .countDataSpoons.countNo(data-id= post._id) #{post.postSpoons} Spoons 
+    .countDataForks.countNo(data-id= post._id) #{post.postForks} Forks

@@ -4,7 +4,7 @@ const pModel = require("./post");
 let fetchPosts = async () =>{
 return await pModel.find()
 .sort({postDescription:-1,postSpoons:1})
-.select({postTitle:1,postTags:{$slice:1},postSource:1,postLink:1,postImageSrc:1})
+.select({postTitle:1,postTags:{$slice:1},postSource:1,postLink:1,postImageSrc:1,postSpoons:1,postForks:1})
 .limit(3);
 };
 

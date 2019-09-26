@@ -1877,3 +1877,52 @@ section
 {
 	border-bottom: solid 1px rgba(255,255,255,1);
 }
+
+/*11.Options*/
+.postActions
+{
+	height:23px;
+	width:100%;
+	font-size:1.1rem;
+	display:inline-flex;
+}
+.spoon,.fork,.bookmark
+{
+	width:40px;
+}
+.postActions i{
+	cursor: pointer;
+}
+.count{
+margin-left:25%;
+}
+.CountOfActions
+{
+	font-size:12px;
+	display:inline-flex;
+}
+.countNo{
+	margin-right:3%; 
+	width:70px;
+}
+.countDataSpoons
+{
+	color:red;
+}
+.countDataForks
+{
+	color: #1ab7ea;
+}
+.Spooned
+{
+	color:red;
+	cursor: not-allowed;
+}
+.Forked
+{
+	color:#1ab7ea;
+}
+.Bookmarked
+{
+	color:tomato;
+}
