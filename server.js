@@ -54,6 +54,11 @@ app.use('/otp',otp)
 app.get('/',async(req,res,next) =>{
 const {mPD,scwID,scwiID,scwBD,dcnID} = await require('./models/dontMiss');
 const rQ = await require('./models/headerData');
+let uname;
+if(req.user)
+{
+uname = req.user;
+}
 try
 {
     console.log(`Fetch Gracefully`);
@@ -68,7 +73,8 @@ res.render("index",{
     scwI:scwID,
     scwiI:scwiID,
     scwB:scwBD,
-    dcnI:dcnID
+    dcnI:dcnID,
+    user:uname
 });
 });
 //Call Parser Once when server is started

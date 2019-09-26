@@ -20,13 +20,14 @@ header.header
                 a(href='#') Video
               li
                 a(href='contact.html') Contact
-              li
-                a(href='/User') 
-                  i.fas.fa-user
+              if !user
+                li
+                  a(href='/User') 
+                    i.fas.fa-user
+              else
+                li= user.name
+                  a(href="/User/logout" style="margin-left:10px;") Log out
           .search_container.ml-auto
-            .weather
-              .temperature +10&deg;
-              img.weather_icon(src='images/cloud.png' alt='')
             form(action='#')
               input.header_search_input(type='search' required='required' placeholder='Type to Search...')
               img.header_search_icon(src='images/search.png' alt='')
