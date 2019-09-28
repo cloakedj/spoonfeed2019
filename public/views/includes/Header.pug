@@ -59,6 +59,13 @@ header.header
         a(href='#') Video
       li.menu_mm
         a(href='contact.html') Contact
+      if !user
+        li.menu_mm
+          a(href='/User') 
+            i.fas.fa-user
+      else
+        li.menu_mm= user.name
+          a(href="/User/logout") Log out
 // Home
 .home
   // Home Slider
