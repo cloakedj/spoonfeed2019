@@ -1,7 +1,7 @@
 {
   "name": "SpoonFeed",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Rss News Aggregator build using Nodejs",
   "main": "index.js",
   "dependencies": {
     "@hapi/joi": "^15.1.1",
@@ -29,7 +29,7 @@
     "morgan": "^1.9.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "Node server.js"
   },
   "keywords": [],
   "author": "",
