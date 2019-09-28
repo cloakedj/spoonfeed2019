@@ -15,6 +15,8 @@ const parser = new Parser({
 
 
 let parsedData = async (parseUrl) => {
+    try
+    {
     let feed = await parser.parseURL(parseUrl);
     let getImage = async (uri) =>{
         const { body: html, url } = await got(uri);
@@ -37,6 +39,11 @@ let parsedData = async (parseUrl) => {
     }
     insertPostObj();
     });
+    }
+    catch(ex)
+    {
+        console.log(ex);
+    }
 }
 
 
