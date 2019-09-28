@@ -23,9 +23,7 @@
     "sass": "^1.22.12",
     "scss": "^0.2.4",
     "string-strip-html": "^4.2.3",
-    "striptags": "^3.1.1"
-  },
-  "devDependencies": {
+    "striptags": "^3.1.1",
     "morgan": "^1.9.1"
   },
   "scripts": {
