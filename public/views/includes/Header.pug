@@ -76,7 +76,7 @@ header.header
                       .home_slider_item_category.trans_200
                         a.trans_200(href='category.html')= (post.postSource.split(' '))[0] 
                       .home_slider_item_title
-                        a(href='post.html')
+                        a(href=''+post.postLink+'')
                           | #{post.postTitle}
                       include OptionsBar.pug
                       .home_slider_item_link
