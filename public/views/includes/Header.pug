@@ -26,7 +26,7 @@ header.header
                     i.fas.fa-user
               else
                 li= user.name
-                  a(href="/User/logout" style="margin-left:10px;") Log out
+                li= a(href="/User/logout") Log out
           .search_container.ml-auto
             form(action='#')
               input.header_search_input(type='search' required='required' placeholder='Type to Search...')
@@ -65,7 +65,7 @@ header.header
             i.fas.fa-user
       else
         li.menu_mm= user.name
-          a(href="/User/logout") Log out
+        li.menu_mm= a(href="/User/logout") Log out
 // Home
 .home
   // Home Slider
