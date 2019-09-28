@@ -2,7 +2,7 @@
   "name": "SpoonFeed",
   "version": "1.0.0",
   "description": "An Rss News Aggregator build using Nodejs",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "@hapi/joi": "^15.1.1",
     "bcryptjs": "^2.4.3",
@@ -29,9 +29,9 @@
     "morgan": "^1.9.1"
   },
   "scripts": {
-    "start": "Node server.js"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["SpoonFeed"],
+  "author": "Dhananjay Kanwar",
   "license": "ISC"
 }
