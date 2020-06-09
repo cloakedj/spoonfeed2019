@@ -82,10 +82,10 @@ parser
 .then(elem => console.log(elem))
 .catch(err => console.log(err));
 
-setInterval(()=>
-parser
-.then(elem => console.log(elem))
-.catch(err => console.log(err)),CRAWLINTERVAL);
+// setInterval(()=>
+// parser
+// .then(elem => console.log(elem))
+// .catch(err => console.log(err)),CRAWLINTERVAL);
 
 app.listen(port);
 
