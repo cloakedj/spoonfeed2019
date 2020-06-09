@@ -78,9 +78,9 @@ res.render("index",{
 });
 });
 //Call Parser Once when server is started
-parser
-.then(elem => console.log(elem))
-.catch(err => console.log(err));
+// parser
+// .then(elem => console.log(elem))
+// .catch(err => console.log(err));
 
 // setInterval(()=>
 // parser
