@@ -34,7 +34,7 @@ let parsedData = async (parseUrl) => {
             postDate:item.pubDate,
             postImageSrc:await getImage(item.link)
         });
-        // const result = await postDetObj.save();
+        const result = await postDetObj.save();
         // console.log(result);
     }
     insertPostObj();
