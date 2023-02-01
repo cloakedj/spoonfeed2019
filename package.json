@@ -13,7 +13,7 @@
     "got": "^9.6.0",
     "metascraper": "^5.7.4",
     "metascraper-image": "^5.7.4",
-    "mongoose": "^5.7.5",
+    "mongoose": "^5.13.15",
     "nodemailer": "^6.3.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
