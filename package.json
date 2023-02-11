@@ -10,7 +10,7 @@
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
-    "got": "^9.6.0",
+    "got": "^12.5.3",
     "metascraper": "^5.7.4",
     "metascraper-image": "^5.7.4",
     "mongoose": "^5.7.5",
